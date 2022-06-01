@@ -15,3 +15,4 @@ Se deixar o campo em branco e clicar em Gerar tabuada, aparecera uma mensagem de
 Caso coloque um numero e clique em gerar, no campo abaixo irá aparecer  a tabuada de multiplicação de qualquer numero multiplicado de 1 a 10.
 
 Projeto executado por Flavia P Fonseca.
+tempo gasto para execução 4 horas;
