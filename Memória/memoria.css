@@ -1,0 +1,14 @@
+#memoria {
+    max-width: width 30rem;
+}
+
+#memoria img {
+    margin: bottom 20px; 
+    border:thin solid black;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+#memoria #rodape{
+    text-align: center;
+}
