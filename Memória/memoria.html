@@ -8,16 +8,19 @@
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" 
     crossorigin="anonymous"
     />
-    <title>JoGo da MeMoRiA</title>
+    <title>JOGO DA MEMORIA</title>
     <link rel="stylesheet" href="./memoria.css"/>
     <script src="./memoria.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>JoGo da MeMoRiA</h1>
+        <h1>JOGO DA MEMORIA</h1>
         <div id="memoria">
         <div id="imagens">
         <div class="row">
+        <div class="col">
+        <p id="timer">00:00</p>
+        </div>
         <div class="col-3">
             <img id="i0" crossorigin="anonymous"/>
         </div>
@@ -72,8 +75,14 @@
 </div>
 <div id="rodape" class="row">
     <div class="col">
-        <button id="btInicio" type="button" class="btn-primary btn-large"> INICIAR</button>
+        <button id="btInicio" type="button" class="btn-primary btn-lg">
+        INICIAR
+        </button>
     </div> 
+</div>
+<div class="row mt-5"><div class ="col">
+    <h4>Ultimos tempos:</h4>
+  <ul id="escores"></ul>  
 </div>
 </div>
 </body>
