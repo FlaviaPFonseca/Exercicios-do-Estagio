@@ -69,7 +69,7 @@ const trataCliqueImagem =(e)=>{
     e.target.onclick = null;
 
     if(!temCartaVirada) {
-        temCartaVirada= true;
+        temCartaVirada= true
         posicaoCartaVirada =p;
         valorCartaVirada = valor;
     } else{
@@ -101,8 +101,8 @@ const trataCliqueImagem =(e)=>{
 // Timer- Contador de tempo
 //-------------------------
 function Timer(e){
-    this.element =e;
-    this.time =0;
+    this.element = e;
+    this.time = 0;
     this.control = null;
     this.start =() => {
         thid.time=0;
@@ -110,7 +110,7 @@ function Timer(e){
          this.time ++;
          const minutes = math.trunc(this.time/60);
          const seconds =this.time % 60;
-         document.queryCommandIndeterm(this.element).innerHTML =
+         document.querySelector(this.element).innerHTML =
          (minuts <10 ? '0':'')+  minutes+
          ':' + (seconds <10 ? '0':'')+ 
          seconds;
