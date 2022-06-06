@@ -1,6 +1,6 @@
 //cartas
 let imagens =[];
-for (let i=1; i<=8; i++) imagens.push(`http://picsum.photos/id/${i}/80`);
+for (let i = 1; i <=8; i++) imagens.push(`http://picsum.photos/id/${i}/80`);
 let fundo ='https://picsum.photos/90?grayscale';
  
 // Elementos do estado do jogo
@@ -14,8 +14,7 @@ const timerDoJogo = new Timer('#timer');
 onload = () => {
 // carrega as imagens de fundo
 let elemImagens= document.querySelectorAll('#memoria img');
-elemImagens.forEach (
-    (img,i) =>{
+elemImagens.forEach ( (img,i) =>{
     img.src = fundo; 
     img.setAttribute('data-valor',i);
     img.style.opacity = 0.5;
@@ -31,7 +30,7 @@ elemImagens.forEach (
 const iniciaJogo = () =>{  
     // embaralhar cartas 
     for (let i=0; i<cartas.length;i++){
-        let p = Math.trunc(Math.random() * cartas.length)
+        let p = Math.trunc(Math.random() * cartas.length);
        let aux = cartas[p];
        cartas[p] = cartas[i];
        cartas[i]=aux;
@@ -64,7 +63,7 @@ const iniciaJogo = () =>{
 //-------------------------
 const trataCliqueImagem =(e)=>{
     if(cliquesTravados)return;
-    const p = +e.target.getAttibute('data-valor');
+    const p = +e.target.getAttribute('data-valor');
     const valor = cartas[p];
     e.target.src = imagens[valor - 1];
     e.target.onclick = null;
@@ -113,8 +112,7 @@ function Timer(e){
          const seconds =this.time % 60;
          document.queryCommandIndeterm(this.element).innerHTML =
          (minuts <10 ? '0':'')+  minutes+
-         ':'+
-         (seconds <10 ? '0':'')+ 
+         ':' + (seconds <10 ? '0':'')+ 
          seconds;
      }, 1000 );
     };
