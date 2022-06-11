@@ -1,3 +1,8 @@
+@keyframes pisca {
+  0% { opacity: 0.2;}
+  50% { opacity: 1;}
+  100% { opacity: 0.2;}
+}
 body {
   margin: 30px;
   display: flex;
@@ -12,8 +17,8 @@ body {
   display: flex;
 }
 .tela {
-  width: 500px;
-  height: 320px;
+  width: 600px;
+  height: 420px;
   background: linear-gradient(to right, #899c88, #edf7ef);
   display: flex;
   flex-direction: column;
@@ -89,16 +94,36 @@ body {
   border: 1px solid#000;
   text-align: center;
   line-height: 40px;
-
-}
+  font-size: 25px;
+  }
+  .pisca {
+animation-name: pisca;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+  }
 .d-1-4 { /* nome do prefeito partido e vice*/
   flex: 1;
   line-height: 30px;
 }
 .d-1-right {
   width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
-
+.d-1-image {
+  border:1px solid#000;
+  background-color: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+.d-1-image img{
+  width: 100%;
+}
+.d-1-image.small{
+  width: 80%; 
+  font-size: 12px;
+}
 .d-2 {
   height: 50px;
   font-size: 14px;
