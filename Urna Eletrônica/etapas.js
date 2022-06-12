@@ -1,6 +1,6 @@
 let etapas= [
     {
-    titulo:'VEREADOR'
+    titulo:'VEREADOR',
         numeros: 5,
 get numeros() {
         return this.numeros;
@@ -14,7 +14,7 @@ candidatos: [
         name:'Bertano de Tal',
         partido:'ABC',
         fotos:[
-            { url:38111.jpg, legenda:'Vereador',small:false }
+            { url:'38111.jpg', legenda:'Vereador',small:false }
         ]
     },
     {
@@ -22,7 +22,7 @@ candidatos: [
         name:'Jose de Oliveira',
         partido:'DVD',
         fotos:[
-            { url:77222.jpg, legenda:'Vereador',small:false }
+            { url:'77222.jpg', legenda:'Vereador',small:false }
         ]   
     },
 ]
@@ -53,3 +53,4 @@ candidatos: [
 },  
 ]
     }
+]
