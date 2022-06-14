@@ -11,7 +11,7 @@ set numeros(value) {
 candidatos: [
     {
         numero: 38111,
-        name:'Bertano de Tal',
+        nome:'Bertano de Tal',
         partido:'ABC',
         fotos:[
             { url:'38111.jpg', legenda:'Vereador',small:false }
@@ -19,7 +19,7 @@ candidatos: [
     },
     {
         numero: 77222,
-        name:'Jose de Oliveira',
+        nome:'Jose de Oliveira',
         partido:'DVD',
         fotos:[
             { url:'77222.jpg', legenda:'Vereador',small:false }
@@ -33,22 +33,22 @@ candidatos: [
     candidatos: [
         {
             numero: 99,
-            name:'Ciclano',
+            nome:'Ciclano',
             partido:'DVD',
             vice:'Ciclano de Souza',
             fotos:[
                 { url:'xxxx.jpg', legenda:'Prefeito'},
-                { url:'1xxxx.jpg', legenda:'Vice-Prefeito',small:false }
+                { url:'1xxxx.jpg', legenda:'Vice-Prefeito',small:true}
             ]   
         },
 {
     numero: 48,
-    name:'Jose Ciclano',
+    nome:'Jose Ciclano',
     partido:'DVD',
     vice:'Maria Ciclana de Souza',
     fotos:[
         { url:'4xxxx.jpg', legenda:'Prefeito'},
-        { url:'3xxxx.jpg', legenda:'Vice-Prefeito',small:false }
+        { url:'3xxxx.jpg', legenda:'Vice-Prefeito',small:true }
     ]   
 },  
 ]
