@@ -10,19 +10,19 @@ set numeros(value) {
     },
 candidatos: [
     {
-        numero: 38111,
-        nome:'Bertano de Tal',
+        numero: '38111',
+        nome:'Professor Bertano de Tal',
         partido:'ABC',
         fotos:[
-            { url:'38111.jpg', legenda:'Vereador',small:false }
+            { url:'38111.JPG', legenda:'Vereador',small:false }
         ]
     },
     {
-        numero: 77222,
-        nome:'Jose de Oliveira',
+        numero: '77222',
+        nome:'Jose Bombeiro',
         partido:'DVD',
         fotos:[
-            { url:'77222.jpg', legenda:'Vereador',small:false }
+            { url:'77222.JPG', legenda:'Vereador',small:false }
         ]   
     },
 ]
@@ -32,23 +32,23 @@ candidatos: [
         numeros: 2,
     candidatos: [
         {
-            numero: 99,
+            numero:'99',
             nome:'Ciclano',
             partido:'DVD',
             vice:'Ciclano de Souza',
             fotos:[
-                { url:'xxxx.jpg', legenda:'Prefeito'},
-                { url:'1xxxx.jpg', legenda:'Vice-Prefeito',small:true}
+                { url:'candidato2.JPG', legenda:'Prefeito'},
+                { url:'vice2.JPG', legenda:'Vice-Prefeito',small:true}
             ]   
         },
 {
-    numero: 48,
+    numero:'48',
     nome:'Jose Ciclano',
     partido:'DVD',
     vice:'Maria Ciclana de Souza',
     fotos:[
-        { url:'4xxxx.jpg', legenda:'Prefeito'},
-        { url:'3xxxx.jpg', legenda:'Vice-Prefeito',small:true }
+        { url:'candidato1.JPG', legenda:'Prefeito'},
+        { url:'vice2.JPG', legenda:'Vice-Prefeito',small:true }
     ]   
 },  
 ]
