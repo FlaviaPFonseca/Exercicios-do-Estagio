@@ -121,8 +121,8 @@ function confirma() {
       comecarEtapa()
     } else {
       corrigir = false
-      document.querySelector('.tela').innerHTML =
-        '<div class="aviso_grande pisca">FIM</div>'
+     document.querySelector('.tela').innerHTML =
+        '<div style="margin: 0 auto;" class="aviso--gigante pisca">FIM</div>'
       console.log('FIM!')
     }
   }
