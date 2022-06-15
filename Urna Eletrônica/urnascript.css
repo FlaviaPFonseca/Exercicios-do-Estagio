@@ -140,3 +140,12 @@ animation-iteration-count: infinite;
   font-size: 40px;
   font-weight: bold;
 }
+.caixa-com-aviso {
+  align-items: center;
+  justify-content: center;
+}
+
+.aviso--gigante {
+  font-size: 100px;
+  font-weight: bold;
+}
