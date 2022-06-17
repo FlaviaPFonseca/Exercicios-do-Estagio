@@ -1,3 +1,8 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
 main{
   display: flex;
   width: 100vw;
@@ -57,7 +62,7 @@ main{
   font:bold 1.2rem serif; 
   background: #000;
   color:rgb(221, 221, 161);
-outline:none;
+  outline:none;
   border-radius:5px;
   cursor:pointer;
 }
@@ -77,3 +82,14 @@ outline:none;
   box-sizing: border-box;
   user-select: none;
  }
+ .conteudo{
+    position: absolute;
+  background-color: rgb(200, 209, 37);
+  width: 200px;
+  height: 300px;
+  left:50%;
+  top:70%;
+  border-radius: 20px;
+  box-shadow: 0 0 10px black;
+  transform: translate(-250%,-0%);
+}
