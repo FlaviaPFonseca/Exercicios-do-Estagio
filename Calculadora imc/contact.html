@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo.css"
   <title>Contato</title>
 </head>
 <body>
@@ -20,8 +21,35 @@
       </li>
     </ul>
   </nav>
-  <h1> Fale Comigo! </h1>
-
+  <h1> Entre em Contato! </h1>
+<section class="box">
+  <div class="Contato">
+    <fieldset>
+   <legend><b>Formulario- Contato</b></legend>
+   <br>
+    <form action="/formulario-contato" method="post">
+      <div class="inputBox">
+          <label for="nome">Nome:</label>
+          <input type="texto" id="nome" name="nome_usuario"required>
+      </div>
+      <br><br>
+      <div  class="inputBox">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email_usuario"required>
+      </div>
+      <br><br>
+      <div class="inputBox">
+          <label for="texto">Texto:</label>
+          <textarea id="texto" name="texto_usuario"></textarea>
+      </div>
+      <br><br>
+      <div class="button">
+        <button type="submit">Enviar</button>
+      </div>
+    </fieldset>
+  </form>
+  </div>
+</section>
   <ul>
     <li>
       <a href="mailto:meuemail@email.com">meuemail@email.com</a>

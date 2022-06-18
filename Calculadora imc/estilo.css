@@ -1,8 +1,89 @@
+/* Corpo da Pagina*/
+body {
+  background-color: #cfe8dc;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica;
 }
+
+header {
+  background-color: #35b8b0;
+  height: 80px;
+  padding: 20px;
+}
+footer {
+  clear: both;
+  background-color: #35b8b0;
+  height: 50px;
+  text-align: center;
+  padding: 10px;
+}
+h1 {/*formatação e sombra do titulo 1*/
+  color: black;
+  text-shadow: 1px 1px 1px #111111;
+  text-align: center;
+  margin: 0 0 50px 0;
+}
+#div_principal {
+  background-color: aqua;
+   width: 60%;
+  float: left;
+}
+/*Class*/
+.container {
+  width: 940px;
+  margin: auto;
+}
+
+/* Pagina Formulario de Contato */
+form {
+  margin: 0 auto;
+  width: 400px;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input,
+textarea {
+  font: 30px sans-serif;
+  width: 300px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #000;
+}
+
+textarea {
+  vertical-align: top;
+  height: 150px;
+}
+
+.button {
+  padding-left: 100px;
+}
+
+button {
+  margin-left: 1.5em;
+}
+
+/* Calculadora IMC*/
 main {
   display: flex;
   width: 100vw;
@@ -81,18 +162,20 @@ main {
   box-sizing: border-box;
   user-select: none;
 }
-.topMenu{
-  display:flex;
-background-color: black;
-color: white;
-margin: 0;
-font: normal 16pt Arial;
+.topMenu {
+  display: flex;
+  background-color: black;
+  color: white;
+  margin: 0;
+  font: normal 16pt Arial;
 }
-.topMenu li{color: white;
-text-decoration: none;
-display: block;
-padding:15px;
+.topMenu li {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
 }
 
-.topMenu li:first-child{
-margin-right: auto;
+.topMenu li:first-child {
+  margin-right: auto;
+}
