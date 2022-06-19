@@ -1,0 +1,155 @@
+/*Geral*/
+*{
+  margin:0;
+  padding:1px;
+  font-family:Helvetica, sans-serif;
+}
+/*barra de navegação -Cabeçalho*/
+nav{
+  background-color: #1bbf78;
+  border-bottom: 3px solid #2d3934;
+  height: 50px;
+  }
+  #logo{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top: 15px;
+    left: 10px;
+  }
+  #menu{
+    list-style: none;/*remove as bolinhas do menu*/
+    float: right;
+    margin-top: 17px;
+  }
+  .item {
+    display: inline-block;
+    margin-left:10px;
+    margin-right: 10px;
+  }
+  .item a{ /* mudar a cor dos links do menu*/
+    color:#fff;
+    text-decoration: none;
+  }
+  .item a:hover{
+    color:rgb(38, 35, 35);
+    transition: 0.5s;
+  }
+  /* FIM DA PROPRIEDADE DO CABEÇALHO*/
+  p{
+    color:black
+    font-size:40px;
+  font-family: helvetica,Arial;
+  }
+  body{
+    background-color: rgb(200, 243, 229);
+  }
+  header{
+    background-color: #1bbf78;
+    height: 100px;
+   }
+  #div_esquerda{
+   background-color: antiquewhite;
+   min: height 200px;px;
+   width: 55%;/*largura*/
+   float:left;
+  }
+  #div_direita{
+    background-color: aquamarine;
+    min: height 200px;px;
+    width: 35%;
+   float:right;
+  }
+  /* Container-class  */
+.container{
+width: 960px;
+margin:0 auto;
+}
+  /* Calculadora IMC */
+  main {
+    display: flex;
+    width: 100vw;
+    height: 80vw;
+    justify-content:left;
+    align-items: center;
+  }
+  
+  .container-cal{
+    display:flex;
+    flex-direction:column; /* para ficar na vertical*/
+    background-color: rgb(61, 169, 61);
+    width: 400px;
+    height: 500px;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 0 10px black;
+  }
+  
+  .title {
+    display: flex;
+    justify-content:center;
+    align-items:left;
+    width: 100%;
+    height: 50px;
+    font: bold 2rem serif;
+    border-bottom: solid 5px black margin-botton 20px;
+  }
+  
+  .input {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .input input {
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    outline: 0;
+    font: bold 1.5rem serif;
+    text-align: center;
+  }
+  
+  .input label {
+    font: bold 1.5rem serif;
+  }
+  
+  .button {
+    width: 300px;
+    height: 40px;
+    font: bold 1.2rem serif;
+    background: #000;
+    color: rgb(221, 221, 161);
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .result {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    border-radius: 5px;
+    font: italic 1.5rem serif;
+    box-shadow: 0px 0px 10px black;
+    background: #fff;
+    color: rgb(70, 70, 15);
+    padding: 20px;
+    box-sizing: border-box;
+    user-select: none;
+  }
+  /*Rodape*/
+  footer{
+    clear: both;
+    background-color:#1bbf78 ;
+    height: 30px;
+    text-align: center;
+  }
