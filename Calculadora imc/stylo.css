@@ -43,25 +43,26 @@ nav{
     font-size:20px;
     font-family: helvetica,Arial;
     display:flex;
+    justify-content:flex-start;
+    align-self: center;
   }
   body{
     background-color: rgb(200, 243, 229);
-    }
+       }
   header{
     background-color: #1bbf78;
     height: 100px;
    }
   #_esquerda{
-    padding: 2%;
-    min-height:300px;
+   min-height:300px;
    width: 55%;/*largura*/
+   float:left;
   }
   #_direita{
-    display: inline-block;
-    padding: 2%;
     background-color: aquamarine;
-    min-height: 300px;
-    width: 35%;
+    min-height: 350px;
+    width: 40%;
+    float: right;
     }
   /* Container-class  */
 .container{
