@@ -34,34 +34,35 @@ nav{
     text-decoration: none;
   }
   .item a:hover{
-    color:rgb(38, 35, 35);
-    transition: 0.5s;
+    color:rgb(61, 51, 51);
+    transition:0.5s;
   }
   /* FIM DA PROPRIEDADE DO CABEÇALHO*/
   p{
-    color:black
-    font-size:40px;
-  font-family: helvetica,Arial;
+    color:black;
+    font-size:20px;
+    font-family: helvetica,Arial;
+    display:flex;
   }
   body{
     background-color: rgb(200, 243, 229);
-  }
+    }
   header{
     background-color: #1bbf78;
     height: 100px;
    }
-  #div_esquerda{
-   background-color: antiquewhite;
-   min: height 200px;px;
+  #_esquerda{
+    padding: 2%;
+    min-height:300px;
    width: 55%;/*largura*/
-   float:left;
   }
-  #div_direita{
+  #_direita{
+    display: inline-block;
+    padding: 2%;
     background-color: aquamarine;
-    min: height 200px;px;
+    min-height: 300px;
     width: 35%;
-   float:right;
-  }
+    }
   /* Container-class  */
 .container{
 width: 960px;
@@ -70,21 +71,22 @@ margin:0 auto;
   /* Calculadora IMC */
   main {
     display: flex;
-    width: 100vw;
-    height: 80vw;
+    width: 50vw;
+    height: 40vw;
     justify-content:left;
-    align-items: center;
+    align-items:center;
   }
   
-  .container-cal{
-    display:flex;
+  .container-cal{/*container da calculadora*/
+    display:inline-flex;
+    padding: 1em;
     flex-direction:column; /* para ficar na vertical*/
     background-color: rgb(61, 169, 61);
-    width: 400px;
-    height: 500px;
+    width: 22em;
+    height: 26em;
     justify-content: space-evenly;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 0.5em;
     box-shadow: 0 0 10px black;
   }
   
@@ -93,8 +95,8 @@ margin:0 auto;
     justify-content:center;
     align-items:left;
     width: 100%;
-    height: 50px;
-    font: bold 2rem serif;
+    height:40px;
+    font: bold 1.6rem serif;
     border-bottom: solid 5px black margin-botton 20px;
   }
   
@@ -106,26 +108,26 @@ margin:0 auto;
     align-items: center;
   }
   
-  .input input {
+  .input input {/*caixas de colocar os dados*/
     width: 200px;
     height: 50px;
-    border-radius: 5px;
+    border-radius:5px;
     border: none;
     outline: 0;
-    font: bold 1.5rem serif;
+    font: bold 1.2rem serif;
     text-align: center;
   }
   
   .input label {
-    font: bold 1.5rem serif;
+    font: bold 1.3rem serif;
   }
   
   .button {
     width: 300px;
     height: 40px;
-    font: bold 1.2rem serif;
+    font: bold 1.3rem serif;
     background: #000;
-    color: rgb(221, 221, 161);
+    color: rgb(255, 198, 0);
     outline: none;
     border-radius: 5px;
     cursor: pointer;
@@ -140,9 +142,9 @@ margin:0 auto;
     border-radius: 5px;
     font: italic 1.5rem serif;
     box-shadow: 0px 0px 10px black;
-    background: #fff;
-    color: rgb(70, 70, 15);
-    padding: 20px;
+    background: rgb(197, 175, 175);
+    color: #255,198,0;
+    padding: 10px;
     box-sizing: border-box;
     user-select: none;
   }
