@@ -59,6 +59,7 @@ nav{
    float:left;
   }
   #_direita{
+    margin-top:120px;
     background-color: aquamarine;
     min-height: 350px;
     width: 40%;

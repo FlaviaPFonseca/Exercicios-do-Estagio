@@ -11,24 +11,23 @@ function imc() {
 
     let classificacao = ''
 
-    if (valorIMC < 18.5) {
+    if (valorIMC <= 18.5) {
       classificacao = 'baixo peso'
-    } else if (valorIMC < 25) {
+    } else if (valorIMC >= 18.5 <= 25) {
       classificacao = 'Peso Ideal! Parabéns!!'
-    } else if (valorIMC < 30) {
+    } else if (valorIMC >= 25 <= 30) {
       classificacao = 'Alerta de Sobrepeso!!'
-    } else if (valorIMC < 35) {
+    } else if (valorIMC >= 30 <= 35) {
       classificacao = 'Obesidade Grau I!!'
-    } else if (valorIMC < 40) {
+    } else if (valorIMC >= 35 <= 40) {
       classificacao = 'Obesidade Grau II!!'
-    } else {
+    } else (valorIMC >=41<=100);{
       classificacao =
         'Obesidade Grau III. Cuidado procure ajuda médica e psicológica!!'
     }
 
     resultado.textContent = `${nome} seu IMC é ${valorIMC} e você está ${classificacao}`
-   } else {
   }
 }
 
-calcular.addEventListener('click', imc);
+calcular.addEventListener('click', imc)
