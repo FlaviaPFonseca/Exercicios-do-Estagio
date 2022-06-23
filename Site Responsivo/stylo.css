@@ -1,65 +1,212 @@
-/*Geral*/
-*{
-  margin:0;
-  padding:1px;
-  font-family:Helvetica, sans-serif;
-}
-/*barra de navegação -Cabeçalho*/
-nav{
-  background-color: #1bbf78;
-  border-bottom: 3px solid #2d3934;
-  height: 50px;
-  }
-  #logo{
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    position:absolute;
-    top: 15px;
-    left: 10px;
-  }
-  #menu{
-    list-style: none;/*remove as bolinhas do menu*/
-    float: right;
-    margin-top: 17px;
-  }
-  .item {
-    display: inline-block;
-    margin-left:10px;
-    margin-right: 10px;
-  }
-  .item a{ /* mudar a cor dos links do menu*/
-    color:#fff;
-    text-decoration: none;
-  }
-  .item a:hover{
-    color:rgb(61, 51, 51);
-    transition:0.5s;
-  }
-
-/* MONTANDO O CARROCEL DE IMAGENS */
-
 body{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 100px;
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color:blanchedalmond;
 }
-.carrossel{
-  box-shadow: 2px 2px 4px black;
-  overflow: hidden;
-  height: 500px;
-  width: 500px;
+
+h1,h2,h3{
+  font-family: Arial, sans-serif;
+  color: #000;
 }
-.container{
+
+.botao{
+  color: #fff;/* cor do texto  botao, sem decoração do botao, espaçamento,cor de fundo fonte dinamica, e raio da borda*/
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color:#191970 ;
+  font: 0.9em;
+  border-radius: 3px;
+}
+nav{
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  transform: translateX(0);
+  flex-direction: column;
+  align-items: center;
+  background-color: #191970;
 }
-img{
-  object-fit: cover;
-  height: 500px;
-  width: 500px;
+
+nav > a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 800;
+  font-size: 32px;
+  font-family: Arial, sans-serif;
 }
+
+nav ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+nav ul li{
+  text-align: center;
+  width: 100%;
+}
+
+nav ul li a {
+display: inline-block;
+padding: 10px 0;/*para tirar o espaço*/
+width: 100%;
+text-decoration: none;
+color: #fff;
+}
+/* Cabeçalho*/
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url();/*colocar o caminho da imagem*/
+  background-size: cover;
+  background-repeat: no-repeat;/* para nao haver repetiçoes*/
+  background-position: center;
+  color:#fff;
+  text-align: center;
+  padding: 20px;
+}
+header h1{
+  color: #fff;
+}
+header p{
+  margin-bottom:2em;
+}
+
+#sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; 
+  padding: 10px 10px 20px 20px;
+  background-color: #191970;
+  color:#fff;
+}
+
+#sobre h2{
+  margin-bottom: 2.5em;
+  min-width: 100px;
+  max-width: 1000px;
+}
+#sobre p {
+  margin-bottom: 2.5em;
+  max-width: 1000px;
+}
+#sobre .botao{
+  background-color: #f1f1f1;
+  color: #1c1c1c;
+}
+/*Serviços*/
+#serviços{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:30px; 
+}
+#serviços div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; 
+  margin-top:30px;
+}
+/* Receitas*/
+#receitas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:20px; 
+}
+#receitas h2 {
+  margin-bottom: 20px; 
+}
+#receitas img{
+  width: 100%;
+}
+/*Contatos*/
+#contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding:20px;  
+}
+#contato h2{
+color:#000
+}
+/*Rodape*/
+footer{
+  text-align: center;
+  padding: 10px;
+  background-color: #191970;
+  color: #fff;
+}
+footer a{
+  text-decoration: none;
+  color: #0ff;
+}
+
+@media screen and (min-width:768px) { /*-para diferenciar o tamanho de tada tela*/
+  /*nav*/
+  nav{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  nav ul{
+    flex-direction: row;
+    width: 70%;/*largura*/
+  }
+  /*cabeçalho*/
+  header{
+    height:600px ;
+    height: 60vh;/* não esquecer -altura dinamica*/
+    justify-content: center;
+  }
+  /*sobre*/
+#sobre{
+  height:250px ;
+  height: 30vh;/* não esquecer -altura dinamica*/
+  justify-content: center;
+  min-height: 250px;
+}
+ /*serviços*/
+ #serviços{
+  flex-direction: ruw;
+  flex-wrap: wrap;
+align-items: flex-start;
+  max-height: 1000px;
+  margin: 0 auto;
+}
+#serviços h2{
+  text-align: center;
+  width: 100%;
+}
+#serviços div{
+  flex-grow:1;
+  flex-basis: 150px;/*definir o tamanho maximo das flex*/
+  padding:  0 10px;
+}
+}
+/*receitas*/
+#receitas{
+flex-direction: ruw;
+flex-wrap: wrap;
+}
+#receitas h2{
+  text-align: center;
+  width: 100%;
+}
+#serviços img{
+  text-align: center;
+  width: 33.3333333%;
+}
+  /*COntato*/
+  #contato {
+    flex-direction: ruw;
+    flex-wrap: wrap;  
+    justify-content: space-around;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  #contato h2,#contato p{
+    width: 100%;
+  }
