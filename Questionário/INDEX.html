@@ -26,16 +26,29 @@
       <article class="centro" id="instruçoes">
         Leia com atenção e clique na resposta correta
       </article>
-      <header class="questao">
-        <span id="numQestao"></span>
-        <h2 id="pergunta"></h2>
-      </header>
-      
+      <article class="questoes">
+
+        <header class="questao"> <!--CABEÇALHO DA QUESTAO-->
+          <span id="numQuestao"></span>
+          <h2 id="pergunta"></h2>
+        </header>
+      <div class="corpo">
+        <ol type="A" id="alterantivas"><!--LISTA ORDENADA PARA AS POSSIVEIS RESPOSTAS-->
+          <li id="a" value="1A" class="respostas" onClick="verificarSeAcertou(this,this)"></li>
+          <li id="b" value="1B" class="respostas" onClick="verificarSeAcertou(this,this)"></li>
+          <li id="c" value="1C" class="respostas" onClick="verificarSeAcertou(this,this)"></li>
+          <li id="d" value="1D" class="respostas" onClick="verificarSeAcertou(this,this)"></li>
+        </ol>
+      </div>
+    </article>
+    <article id="aviso" class="centro"> 
+      <input type="range"value="1" min="1" max="10" step="1" name="progresso" id="progresso" disabled /><br>
+      <span id="numero"></span> de<span id="total"></span>
+    </article>
+    <footer id="autoria" class="centro">@Desenvolvido por Flavia P.Fonseca </footer>
     </section>
   </main>
-
-  <footer>
-    <h5 class="centralize">@Criado por Flavia P.Foneca</h5>
-  </footer>
+ <!-- JS externo-->
+ <script src="script.js"></script>
 </body>
 </html>
