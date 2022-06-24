@@ -1,0 +1,91 @@
+/*Geral*/
+*{
+  margin:0;
+  padding:1px;
+  font-family:Helvetica, sans-serif;
+}
+/*barra de navegação -Cabeçalho*/
+nav{
+  background-color: #1bbf78;
+  border-bottom: 3px solid #2d3934;
+  height: 50px;
+  }
+  #logo{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top: 15px;
+    left: 10px;
+  }
+  #menu{
+    list-style: none;/*remove as bolinhas do menu*/
+    float: right;
+    margin-top: 17px;
+  }
+  .item {
+    display: inline-block;
+    margin-left:10px;
+    margin-right: 10px;
+  }
+  .item a{ /* mudar a cor dos links do menu*/
+    color:#fff;
+    text-decoration: none;
+  }
+  .item a:hover{
+    color:rgb(38, 35, 35);
+    transition: 0.5s;
+  }
+   /*Rodape*/
+   footer{
+    clear: both;
+    background-color:#1bbf78 ;
+    height: 30px;
+    text-align: center;
+  }
+  
+  /*Pagina de Contato*/
+  form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+  }
+  
+  form div + div {
+    margin-top: 1em;
+  }
+  
+  label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+  }
+  
+  input,
+  textarea {
+    font: 30px sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #000;
+  }
+  
+  textarea {
+    vertical-align: top;
+    height: 150px;
+  }
+  
+  .button {
+    padding-left: 100px;
+  }
+  
+  button {
+    margin-left: 1.5em;
+  }
