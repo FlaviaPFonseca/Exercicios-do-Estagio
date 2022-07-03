@@ -37,6 +37,26 @@ nav{
     color:rgb(38, 35, 35);
     transition: 0.5s;
   }
+
+  /*Produtos e carrinho*/
+  #produto{
+  max-width:900px
+  margin:0 auto
+  padding:0 2%
+  display: flex
+  }
+
+  #carrinho{
+  max-width:900px
+  margin:0 auto
+  padding:0 2%
+  display: flex
+  }
+
+  .produto-single{
+    width: 33.3%;
+    padding: 0 20px;
+  }
 /*Rodape*/
 footer{
   clear: both;
