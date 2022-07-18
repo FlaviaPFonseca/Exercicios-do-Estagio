@@ -1,181 +1,100 @@
-let titulo = document.querySelector('h1')
-let instruçoes = document.querySelector('#instruçoes')
-let aviso = document.querySelector('#aviso')
-//let respostaEsta = document.querySelector('#respostaEsta')
-let pontos = 0 //pontos do placar
-let placar = 0 // placar
+var answers = {};
 
-//perguntas
-let numQuestao = document.querySelector('#numQuestao')
-let pergunta = document.querySelector('#pergunta')
+var question_one = document.getElementById('question-1');
+var question_two = document.getElementById('question-2');
+var question_three = document.getElementById('question-3');
+var question_four = document.getElementById('question-4');
+var question_five = document.getElementById('question-5');
 
-//alternativas
-let a = document.querySelector('#a')
-let b = document.querySelector('#b')
-let c = document.querySelector('#c')
-let d = document.querySelector('#d')
-
-//article com class das questoes
-let articleQuestoes = document.querySelector('.questoes')
-//ol li com as alteranitvas de respostas
-let alteranitvas = document.querySelector('#alternativas')
-
-const q0 = {
-  numQuestao: 0,
-  pergunta: 'pergunta',
-  alterantivaA: 'Alternativa A',
-  alterantivaB: 'Alternativa B',
-  alterantivaC: 'Alternativa C',
-  alterantivaD: 'Alternativa D',
-  correta: '0'
+function storeAnswer(question_number, event){
+    if(event.target.type === 'radio'){
+        console.log(event.target.value);
+        answers['question'+question_number] = parseInt(event.target.value);
+        console.log(answers);
+    }
 }
-const q1 = {
-  numQuestao: 1,
-  pergunta: 'pergunta',
-  alterantivaA: 'Alternativa A',
-  alterantivaB: 'Alternativa B',
-  alterantivaC: 'Alternativa C',
-  alterantivaD: 'Alternativa D',
-  correta: '0'
+
+question_one.addEventListener('click', function(event){
+    storeAnswer(1, event)
+})
+question_two.addEventListener('click', function(event){
+    storeAnswer(2, event)
+})
+question_three.addEventListener('click', function(event){
+    storeAnswer(3, event)
+})
+question_four.addEventListener('click', function(event){
+    storeAnswer(4, event)
+})
+question_five.addEventListener('click', function(event){
+    storeAnswer(5, event)
+})
+
+function totalScore(){
+    var total_score = 
+    answers.question1+
+    answers.question2+
+    answers.question3+
+    answers.question4+ 
+    answers.question5;
+    
+    return total_score;
 }
-const q2 = {
-  numQuestao: 2,
-  pergunta: 'pergunta',
-  alterantivaA: 'Alternativa A',
-  alterantivaB: 'Alternativa B',
-  alterantivaC: 'Alternativa C',
-  alterantivaD: 'Alternativa D',
-  correta: '0'
+
+function getInfoBasedOnScore(){
+    if(totalScore() < 7){
+        var score_info = "Você precisa tomar mais cuidado com a segurança!";
+    } else if(totalScore() > 7){
+        var score_info = "Parabéns! Você está bem de segurança!"
+    }
+
+    return score_info;
 }
-const q3 = {
-  numQuestao: 3,
-  pergunta: 'pergunta',
-  alterantivaA: 'Alternativa A',
-  alterantivaB: 'Alternativa B',
-  alterantivaC: 'Alternativa C',
-  alterantivaD: 'Alternativa D',
-  correta: '0'
+
+var submit1 = document.getElementById('submit1');
+var submit2 = document.getElementById('submit2');
+var submit3 = document.getElementById('submit3');
+var submit4 = document.getElementById('submit4');
+var submit5 = document.getElementById('submit5');
+
+function nextQuestion(question_number){
+    var current_question_number = question_number - 1;
+    var question_number = question_number.toString();
+    var current_question_number = current_question_number.toString();
+
+    var el = document.getElementById('question-'+question_number);
+    var el2 = document.getElementById('question-'+current_question_number);
+
+    el.style.display = "block";
+    el2.style.display = "none";
 }
-const q4 = {
-  numQuestao: 4,
-  pergunta: 'pergunta',
-  alterantivaA: 'Alternativa A',
-  alterantivaB: 'Alternativa B',
-  alterantivaC: 'Alternativa C',
-  alterantivaD: 'Alternativa D',
-  correta: '0'
+
+submit1.addEventListener('click', function(){
+    nextQuestion(2);
+    growProgressBar('40%');
+})
+submit2.addEventListener('click', function(){
+    nextQuestion(3);
+    growProgressBar('60%');
+})
+submit3.addEventListener('click', function(){
+    nextQuestion(4);
+    growProgressBar('80%');
+})
+submit4.addEventListener('click', function(){
+    nextQuestion(5);
+    growProgressBar('100%');
+})
+submit5.addEventListener('click', function(){
+    nextQuestion(6);
+})
+
+submit5.addEventListener('click', function(){
+    document.getElementById("printtotalscore").innerHTML = totalScore();
+    document.getElementById("printscoreinfo").innerHTML = getInfoBasedOnScore();
+})
+
+function growProgressBar(percentage_width){
+    var bar = document.getElementById("progress_bar");
+    bar.style.width = percentage_width;
 }
-//contante com array
-const questoes = [q0, q1, q2, q3, q4, q5]
-
-let numero = document.querySelector('#numero')
-let total = document.querySelector('#total')
-
-numero.textContent = q1.numQuestao
-let totalDeQuestoes = questoes.length - 1
-console.log('Total De Questões' + totalDeQuestoes)
-total.textContent = totalDeQuestoes
-
-//montar a primeira questao completa para iniciar o Quiz
-numQuestao.textContent = q1.numQuestao
-pergunta.textContent = q1.numQuestao
-a.textContent = q1.alterantivaA
-b.textContent = q1.alterantivaB
-c.textContent = q1.alterantivaC
-d.textContent = q1.alterantivaD
-
-//configurar o Value inicial da questao 1
-a.setAttribute('value,1A')
-b.setAttribute('value,1B')
-c.setAttribute('value,1C')
-d.setAttribute('value,1D')
-
-//PARA MONTAR AS NOVAS QUESTOES aCHO QUE VAI DAR ERRO AQUI NQUESTAO OU NUMQ
-function proximaQuestao(nQuestao) {
-  numero.textContent = nQuestao
-  numQuestao.textContent = questoes[nQuestao].numQuestao
-  pergunta.textContent = questoes[nQuestao].pergunta
-  a.textContent = questoes[nQuestao].alterantivaA
-  b.textContent = questoes[nQuestao].alterantivaB
-  c.textContent = questoes[nQuestao].alterantivaC
-  d.textContent = questoes[nQuestao].alterantivaD
-  a.setAttribute('value', nQuestao + 'A')
-  b.setAttribute('value', nQuestao + 'B')
-  c.setAttribute('value', nQuestao + 'C')
-  d.setAttribute('value', nQuestao + 'D')
-}
-function bloquearAlternativas() {
-  a.classList.add('bloqueado')
-  b.classList.add('bloqueado')
-  c.classList.add('bloqueado')
-  d.classList.add('bloqueado')
-}
-function desbloquearAlternativas() {
-  a.classList.remove('bloqueado')
-  b.classList.remove('bloqueado')
-  c.classList.remove('bloqueado')
-  d.classList.remove('bloqueado')
-}
-function verificarSeAcertou(nQuestao, resposta) {
-
-  let respostaEscolhida = nQuestao.value
-  console.log('Questão' + numeroDaQuestao)
-
-  let numeroDaQuestao = resposta.textContent
-  console.log('RespU' + respostaEscolhida)
-
-  let certa = questoes[numeroDaQestao].correta
-  console.log('RespC' + certa) 
-
-  if( respostaEscolhida ==certa){
-    pontos += 10 
-    // console.log("Acertou!")
-   }else {
-   // console.log("errou!")
-   }
-   // Atualizar placar
-   placar = pontos
-   instruçoes.textContent ="Pontos" + placar
-
-   // bloquear novas escolhas de opçoes
-   bloquearAlternativas()
-
-   setInterval(function(){
-    proxima = numeroDaQuestao+1
-
-    if(proxima> totalDeQuestoes){
-      console.log('Fim de Jogo!')
-      fimDoJogo()
-        }else{
-          proximaQuestao(proxima)
-        }
-   },250)
-desbloquearAlternativas()
-   }
-   function fimDoJogo(){
-    instruçoes.textContent = "Fim de Jogo!"
-    numQuestao.textContent= ""
-
-    let pont =''
-    pontos ==0 ? pont ='ponto' : pont='pontos'
-
-    pergunta.textContent = "Voce Conseguiu" + pontos +""+'pont'
-
-    a.textContent =""
-    b.textContent =""
-    c.textContent =""
-    d.textContent =""
-
-    a.setAttribute('value','0')
-    b.setAttribute('value','0')
-    c.setAttribute('value','0')
-    d.setAttribute('value','0')
-
-    articleQuestoes.getElementsByClassName.display = 'none'
-
-    setTimeout(function(){
-      pontos = 0  // zerar placar nao esquecer
-      location.reload
-    },2000)
-   }
-
